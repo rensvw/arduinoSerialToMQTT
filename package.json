@@ -1,0 +1,17 @@
+{
+    "name": "arduinoSerialMQTTConnection",
+    "version": "1.0.0",
+    "description": "Connecting arduino Serial connection to a MQTT broker",
+    "main": "app.js",
+    "dependencies": {
+        "jshint": "^2.9.4",
+        "mqtt": "^2.1.3",
+        "serialport": "^4.0.6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rensvw/arduinoSerialToMQTT.git"
+    },
+    "author": "Rens van Woudenberg",
+    "license": "ISC"
+}
