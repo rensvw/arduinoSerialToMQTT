@@ -76,24 +76,27 @@ void loop() {
 
    if(message == "lightOn"){
     digitalWrite(lightsLivingRoom, HIGH);   // Turn the LED on 
-    Serial.println("{'Lamp':'Aan','Verwarming':'"+ String(heatingState) + "','Bewegingssensor':'"+ String(motionSensorState) + "','Deurcontact':'"+ String(doorSensorState) + "','Raamcontact':'" + String(windowSensorState) + "'}");
+    Serial.println("{'lamp':'1','heating':'"+ String(heatingState) + "','movingSensor':'"+ String(motionSensorState) + "','doorSensor':'"+ String(doorSensorState) + "','windowSensor':'" + String(windowSensorState) + "','tempSensor':'" + String(tempSensorState) + "','lightSensor':'" + String(lightSensorState) + "'}");
     delay(1000); 
   }
    if(message == "lighOff"){  
     digitalWrite(lightsLivingRoom, LOW);    // Turn the LED off
-    Serial.println("{'Lamp':'Uit','Verwarming':'"+ String(heatingState) + "','Bewegingssensor':'"+ String(motionSensorState) + "','Deurcontact':'"+ String(doorSensorState) + "','Raamcontact':'" + String(windowSensorState) + "'}");
+    Serial.println("{'lamp':'0','heating':'"+ String(heatingState) + "','movingSensor':'"+ String(motionSensorState) + "','doorSensor':'"+ String(doorSensorState) + "','windowSensor':'" + String(windowSensorState) + "','tempSensor':'" + String(tempSensorState) + "','lightSensor':'" + String(lightSensorState) + "'}");
     delay(1000); 
   }
 
   if(message == "heatingOn"){
     digitalWrite(heating, HIGH); // Simulate the heating by turning the red light on
-    Serial.println("{'Lamp':'"+ String(lightsLivingRoomState) + "','Verwarming':'"+ String(heatingState) + "','Bewegingssensor':'"+ String(motionSensorState) + "','Deurcontact':'"+ String(doorSensorState) + "','Raamcontact':'" + String(windowSensorState) + "'}");
+    Serial.println("{'lamp':'"+ String(lightsLivingRoomState) + "','heating':'"+ String(heatingState) + "','movingSensor':'"+ String(motionSensorState) + "','doorSensor':'"+ String(doorSensorState) + "','windowSensor':'" + String(windowSensorState) + "','tempSensor':'" + String(tempSensorState) + "','lightSensor':'" + String(lightSensorState) + "'}");
     delay(1000); 
   }
 
   if(message == "heatingOff"){
     digitalWrite(heating, LOW); // Simulate the heating by turning the red light on
-    Serial.println("{'Lamp':'"+ String(lightsLivingRoomState) + "','Verwarming':'"+ String(heatingState) + "','Bewegingssensor':'"+ String(motionSensorState) + "','Deurcontact':'"+ String(doorSensorState) + "','Raamcontact':'" + String(windowSensorState) + "'}");
+    Serial.println("{'lamp':'"+ String(lightsLivingRoomState) + "','heating':'"+ String(heatingState) + "','movingSensor':'"+ String(motionSensorState) + "','doorSensor':'"+ String(doorSensorState) + "','windowSensor':'" + String(windowSensorState) + "','tempSensor':'" + String(tempSensorState) + "','lightSensor':'" + String(lightSensorState) + "'}");
     delay(1000); 
   }
+
+  Serial.println("{'lamp':'"+ String(lightsLivingRoomState) + "','heating':'"+ String(heatingState) + "','movingSensor':'"+ String(motionSensorState) + "','doorSensor':'"+ String(doorSensorState) + "','windowSensor':'" + String(windowSensorState) + "','tempSensor':'" + String(tempSensorState) + "','lightSensor':'" + String(lightSensorState) + "'}");
+  delay(1000);
 } 
