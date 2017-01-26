@@ -58,18 +58,18 @@ void setup() {
 
 void loop() {
     // Read States of Sensors
-    motionSensorState = digitalRead(motionSensor);
+    int motionSensorState = digitalRead(motionSensor);
     //lightSensorState = digitalRead(lightSensor);
     // tempSensorState = digitalRead(tempSensor); // Code that reads Temperature sensor
     // proxSensorState = readIR(5);               // Code that reads Proximity sensor
-    doorSensorState = digitalRead(doorSensor);
-    windowSensorState = digitalRead(windowSensor);
+    int doorSensorState = digitalRead(doorSensor);
+    int windowSensorState = digitalRead(windowSensor);
 
     // Read States of Actuators
-    buzzerState = digitalRead(buzzer);
-    sirenState = digitalRead(siren);
-    lightsLivingRoomState = digitalRead(lightsLivingRoom);
-    heatingState = digitalRead(heating);
+    int buzzerState = digitalRead(buzzer);
+    int sirenState = digitalRead(siren);
+    int lightsLivingRoomState = digitalRead(lightsLivingRoom);
+    int heatingState = digitalRead(heating);
     
     // Define message
     String message = Serial.readStringUntil('#');  

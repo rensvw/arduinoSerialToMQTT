@@ -2,7 +2,7 @@ var config = {};
 
 config.debug = process.env.DEBUG || false;
 
-config.serialport = process.env.SERIAL_PORT || "/dev/ttyACM2";
+config.serialport = process.env.SERIAL_PORT || "COM5";
 config.baudrate = process.env.BAUD_RATE || 9600;
 
 config.mqtt = {};
